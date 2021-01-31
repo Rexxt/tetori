@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Tetris game written in pure bash
 #
@@ -27,7 +27,7 @@
 set -u # non initialized variable is an error
 script_dir=$(dirname $(readlink -f $0)) # define script location
 
-# show usage when given -h argument 
+# show usage when given -h argument
 usage() {
     local available_languages=$(ls -I README.md $script_dir/lang/ 2>/dev/null | cut -d. -f1)    # show available languages
     echo "usage: $0 [-h] [-l language]"
@@ -132,7 +132,7 @@ NEXT_Y=11
 GAMEOVER_X=1
 GAMEOVER_Y=$((PLAYFIELD_H + 3))
 
-# Intervals after which game level (and game speed) is increased 
+# Intervals after which game level (and game speed) is increased
 LEVEL_UP=20
 
 colors=($RED $GREEN $YELLOW $BLUE $FUCHSIA $CYAN $WHITE)
