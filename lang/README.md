@@ -1,14 +1,15 @@
-if you want add new language;
+if you want to add a new language;
 
-  Create `<language_you_added.sh>` file, at that dir.
+  Create a `<language_you_added.sh>` file, at that dir.
 
-It name will be such as english.sh
+Its name will be such as english.sh
 
-and run **tetris.sh** as:
-```text
-./tetris.sh -l english
+and run **tetori.sh** as:
+```sh
+sh /tetori.sh -l english
 ```
-Tetris script will automatically identify the local variables you added.
+
+The main script will automatically identify the local variables you added.
 
 
 EXAMPLE `language_you_added.sh` file:
