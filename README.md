@@ -1,6 +1,6 @@
-tetris
+tetori.sh
 ===========
 
-Tetris game implemented in languages I used for something more serious than "Hello world".
+Bash stacking engine with customizable modes, rulesets and language files
 
-Tested on linux and Mac OS (using the built-in `clang`).
+Tested on Windows third-party bash
