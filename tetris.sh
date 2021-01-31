@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# Tetris game written in pure bash
+# Stacker engine written in pure bash
 #
-# I tried to mimic as close as possible original tetris game
-# which was implemented on old soviet DVK computers (PDP-11 clones)
+# Customizable modes, languages, rulesets.
 #
 # Videos of this tetris can be found here:
 #
@@ -17,7 +16,7 @@
 #
 # Author: Kirill Timofeev <kt97679@gmail.com>
 #
-# Localized Support: Rojen Zaman <rojen@riseup.net> | lang/README.md
+# Locale Support: Rojen Zaman <rojen@riseup.net> | lang/README.md
 #
 # This program is free software. It comes without any warranty, to the extent
 # permitted by applicable law. You can redistribute it and/or modify it under
@@ -272,12 +271,12 @@ toggle_help() {
 # relative coordinates are calculated as follows:
 # x=((cell & 3)); y=((cell >> 2))
 piece_data=(
-"1256"             # square
-"159d4567"         # line
+"1256"             # o
+"159d4567"         # i
 "45120459"         # s
 "01561548"         # z
 "159a845601592654" # l
-"159804562159a654" # inverted l
+"159804562159a654" # j
 "1456159645694159" # t
 )
 
@@ -367,7 +366,7 @@ get_random_next() {
     draw_next 0
     # now let's get next piece
     ((next_piece = RANDOM % ${#piece_data[@]}))
-    ((next_piece_rotation = RANDOM % (${#piece_data[$next_piece]} / 4)))
+    ((next_piece_rotation = 2))
     ((next_piece_color = colors[RANDOM % ${#colors[@]}]))
     draw_next
 }
